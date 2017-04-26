@@ -20,4 +20,5 @@ dpush:
         username: tannaalok
         password: Acs@dm1n
         repository: tannaalok/wnode
+        cmd: /bin/bash -c “cd /pipeline/source && supervisor — watch ./src src/server.js”
         
