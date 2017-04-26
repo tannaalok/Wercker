@@ -6,6 +6,10 @@ build:
         name: Run unit tests
         code: |
           npm run test
+    - internal/docker-push:
+        username: tannaalok
+        password: Acs@dm1n
+        repository: tannaalok/wnode
 deploy:
   steps:
     - heroku-deploy:
