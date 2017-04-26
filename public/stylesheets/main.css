@@ -1,5 +1,5 @@
 .gradient__rolling {
-  background: linear-gradient(323deg, #f857a6, #ff5858);
+  background: linear-gradient(323deg, #f857a6, #1a0860);
   background-size: 600% 600%;
 
   -webkit-animation: RollGradient 20s ease infinite;
