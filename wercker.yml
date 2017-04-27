@@ -44,12 +44,3 @@ deploydo:
          name: run new container
          code: ssh root@107.170.73.20 docker run -i -t -p 5000:5000 -d --name wnode tannaalok/wnode /usr/local/bin/node /pipeline/source/index.js
  
- gaurav:
-   steps:
-     - add-ssh-key:
-         keyname: openstack
-     - add-to-known_hosts:
-         hostname: 184.94.251.95
-     - script:
-         name: pull latest image
-         code: ssh cloud@184.94.251.95 sudo docker pull tannaalok/wnode:latest
