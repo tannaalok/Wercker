@@ -23,6 +23,7 @@ dpush:
         repository: tannaalok/wnode
         cmd: /bin/bash -c “cd /pipeline/source && supervisor — watch ./src src/server.js”
 
+
 deploydo:
    steps:
      - add-ssh-key:
