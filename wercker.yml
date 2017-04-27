@@ -27,7 +27,7 @@ dpush:
 deploydo:
    steps:
      - add-ssh-key:
-         keyname: DIGITAL_OCEAN
+         keyname: digitalocean
      - add-to-known_hosts:
          hostname: 107.170.73.20
      - script:
