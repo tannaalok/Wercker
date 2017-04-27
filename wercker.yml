@@ -43,4 +43,4 @@ deploydo:
          code: ssh root@107.170.73.20 docker rmi tannaalok/wnode:latest || echo ‘failed to remove image behind stopped container’
      - script:
          name: run new container
-         code: ssh root@107.170.73.20 docker run -d -p 8080:80 --name wnode tannaalok/wnode
+         code: ssh root@107.170.73.20 docker run -i -t -p 5000:5000 -d tannaalok/wnode /usr/local/bin/node /pipeline/source/index.js
