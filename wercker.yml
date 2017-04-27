@@ -37,10 +37,10 @@ deploydo:
          code: ssh root@107.170.73.20 docker stop wnode || echo ‘failed to stop running container’
      - script:
          name: remove stopped container
-         code: ssh root@107.170.73.20 docker rm wnode || echo ‘failed to remove stopped container’
+         code: ssh root@107.170.73.20 docker rm wnode --force || echo ‘failed to remove stopped container’ 
      - script:
          name: remove image behind stopped container
          code: ssh root@107.170.73.20 docker rmi tannaalok/wnode:latest || echo ‘failed to remove image behind stopped container’
      - script:
          name: run new container
-         code: ssh root@107.170.73.20 docker run -i -t -p 5000:5000 -d tannaalok/wnode /usr/local/bin/node /pipeline/source/index.js
+         code: ssh root@107.170.73.20 docker run -i -t -p 5000:5000 -d --name wnode tannaalok/wnode /usr/local/bin/node /pipeline/source/index.js
